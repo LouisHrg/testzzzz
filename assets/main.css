@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Pro:wght@200;600;700&display=swap');
+
+@font-face {
+  font-family: 'FUCXEDCAPS';
+  src: local('FUCXEDCAPS'), url(./assets/FUCXEDCAPS.woff) format('woff');
+}
+
+body {
+  @apply font-display;
+}
+h1, h2, h3, h4, h5 {
+  @apply font-title;
+}
+/*h1 {
+  font-size: 30px !important;
+}
+h2 {
+  font-size: 25px !important;
+}
+
+h3 {
+  font-size: 22px !important;
+}*/
