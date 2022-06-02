@@ -6,13 +6,14 @@
       </div>
     </nav>
     <div class="md:w-1/2 mx-10 md:mx-auto mt-4">
-      <div v-if="content" v-html="content.html"></div>
+      <div v-if="content" v-html="content.content"></div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import data from '@/build/database/data.json';
+
 export default {
   data() {
     return {
@@ -20,13 +21,9 @@ export default {
     };
   },
   name: 'ShowKit',
-  async created() {
-    const res = await axios.get(`http://wiki.xrbnb.eu/api/pages/${this.$route.params.id}`, {
-      headers: {
-        authorization: process.env.apiToken,
-      }
-    });
-    this.content = res.data;
+  created() {
+    const id = parseInt(this.$route.params.id);
+    this.content = data.find(el => el.id === id);
   }
 }
 </script>

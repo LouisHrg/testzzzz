@@ -26,7 +26,7 @@
 
 <script>
 import { mapActions } from 'pinia';
-import axios from 'axios';
+import data from '@/build/database/data.json';
 import useSearchStore from '~/stores/searchStore';
 
 export default {
@@ -46,14 +46,9 @@ export default {
     }
   },
   name: 'IndexPage',
-  async created() {
+  created() {
     this.warmupSearch();
-    const res = await axios.get('http://wiki.xrbnb.eu/api/search?query=[kit_antipub]', {
-      headers: {
-        authorization: process.env.apiToken,
-      }
-    });
-    this.links = res.data.data.map(el => ({ title: el.name, id: el.id }));
+    this.links = data;
     this.loaded = true;
   },
   methods: {
