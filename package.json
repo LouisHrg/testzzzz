@@ -16,7 +16,7 @@
     "@nuxtjs/composition-api": "^0.32.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@pinia/nuxt": "^0.1.9",
-    "core-js": "^3.19.3",
+    "core-js": "^3.23.0",
     "js-search": "^2.0.0",
     "nuxt": "^2.15.8",
     "pinia": "^2.0.14",
